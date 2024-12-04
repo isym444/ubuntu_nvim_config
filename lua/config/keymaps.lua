@@ -2,6 +2,11 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 
+local opts = { noremap = true, silent = true }
+
+-- Map 'jj' to <Esc> in insert mode
+vim.api.nvim_set_keymap("i", "jj", "<Esc>", opts)
+
 -- Navigate buffers
 vim.keymap.set("n", "<Tab>", ":BufferLineCycleNext<CR>", { desc = "Next buffer" })
 vim.keymap.set("n", "<S-Tab>", ":BufferLineCyclePrev<CR>", { desc = "Previous buffer" })
