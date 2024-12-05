@@ -19,3 +19,4 @@ require("oil").setup({
     wrap = true,
   },
 })
+require("Comment").setup()
