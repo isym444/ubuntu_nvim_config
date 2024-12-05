@@ -136,7 +136,7 @@ function _G.my_custom_functions.toggle_terminal(opts)
       -- Reopen the terminal in a vertical split and switch to Terminal mode
       vim.cmd("vsplit")
       vim.cmd("buffer " .. terminal_buf)
-      vim.cmd("vertical resize 50") -- Adjust the width to 50 columns
+      vim.cmd("vertical resize 60") -- Adjust the width to 50 columns
       vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("i", true, false, true), "n", true)
     end
   else
@@ -144,7 +144,7 @@ function _G.my_custom_functions.toggle_terminal(opts)
     vim.cmd("vsplit")
     vim.cmd("terminal")
     terminal_buf = vim.api.nvim_get_current_buf() -- Store the terminal buffer ID
-    vim.cmd("vertical resize 50") -- Adjust the width to 50 columns
+    vim.cmd("vertical resize 60") -- Adjust the width to 50 columns
 
     -- Enter Terminal mode
     vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("i", true, false, true), "n", true)
